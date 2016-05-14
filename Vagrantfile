@@ -9,7 +9,7 @@ SCRIPT
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.provision :shell, :inline => $script
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.synced_folder "~/Documents/rejs", "/home/vagrant/rejs"
   config.vm.synced_folder "~/Documents/reegbase", "/home/vagrant/reegbase"
